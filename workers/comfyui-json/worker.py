@@ -69,6 +69,16 @@ worker_config = WorkerConfig(
             benchmark_config=BenchmarkConfig(
                 dataset=benchmark_dataset,
             )
+        ),
+        HandlerConfig(
+            route="/generate",
+            allow_parallel_requests=False,
+            max_queue_time=10.0
+        ),
+        HandlerConfig(
+            route="/result/*",
+            allow_parallel_requests=False,
+            max_queue_time=10.0
         )
     ],
     log_action_config=LogActionConfig(
