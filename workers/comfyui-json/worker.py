@@ -71,6 +71,11 @@ worker_config = WorkerConfig(
             )
         ),
         HandlerConfig(
+            route="/generate/stream",
+            allow_parallel_requests=False,
+            max_queue_time=10.0
+        ),
+        HandlerConfig(
             route="/generate",
             allow_parallel_requests=False,
             max_queue_time=10.0
