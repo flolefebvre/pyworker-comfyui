@@ -79,6 +79,9 @@ worker_config = WorkerConfig(
             route="/result/*",
             allow_parallel_requests=False,
             max_queue_time=10.0
+        ),
+        HandlerConfig(
+            route="/queue",
         )
     ],
     log_action_config=LogActionConfig(
